@@ -6,7 +6,7 @@
 
 :root {
   --text-color: white;
-  --bg-url: url(Mobile/Dark\ mode.jpg);
+  --bg-url: url(./Mobile/Dark\ mode.jpg);
   --stroke-color: rgba(255, 255, 255, 0.5);
   --surface-color: rgba(255, 255, 255, 0.1);
   --surface-color-hover: rgba(255, 255, 255, 0.05);
@@ -33,6 +33,7 @@ body {
  */
 
   background: var(--bg-url) no-repeat top center/cover;
+  height: 100vh;
 }
 
 body * {
@@ -41,7 +42,8 @@ body * {
 }
 
 #container {
-  width: 362px;
+  width: 100%;
+  max-width: 588px;
   margin-right: auto;
   margin-left: auto;
   margin: 56px auto 0px;
@@ -158,4 +160,13 @@ footer {
   text-align: center;
   font-size: 14px;
   font-weight: 400;
+}
+
+@media (min-width: 700px) {
+  :root {
+    --bg-url: url(./Mobile/WebDark.jpg);
+  }
+  .light {
+    --bg-url: url(./Mobile/WebLight.jpg);
+  }
 }
